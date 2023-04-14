@@ -11,3 +11,11 @@ class TestFactor(unittest.TestCase):
             self.assertAlmostEqual(output, 107.77)
         except:
             self.fail()
+
+    def test_load_factor_values(self):
+        try:
+            from src.load_factor_values import load_factor_values
+            df = load_factor_values(begin_date='20230410', end_date='20230414')
+            print(df)
+        except:
+            self.fail()
