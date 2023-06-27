@@ -14,6 +14,13 @@ def load_factor_values(begin_date, end_date):
     factor_list.append(FACTOR_FACTOR)
     factor_list.append(DAILY_RETURN)
 
+    from src.factor_lib.gf_industry_rotation_factor.industry_momentum_factor import GF_INDUSTRY_MOMENTUM_CITIC_LEVEL_2_1_DAY_FACTOR, GF_INDUSTRY_MOMENTUM_CITIC_LEVEL_2_1_WEEK_FACTOR, GF_INDUSTRY_MOMENTUM_CITIC_LEVEL_2_1_MONTH_FACTOR, GF_INDUSTRY_MOMENTUM_CITIC_LEVEL_2_3_MONTH_FACTOR, GF_INDUSTRY_MOMENTUM_CITIC_LEVEL_2_6_MONTH_FACTOR
+    factor_list.append(GF_INDUSTRY_MOMENTUM_CITIC_LEVEL_2_1_DAY_FACTOR)
+    factor_list.append(GF_INDUSTRY_MOMENTUM_CITIC_LEVEL_2_1_WEEK_FACTOR)
+    factor_list.append(GF_INDUSTRY_MOMENTUM_CITIC_LEVEL_2_1_MONTH_FACTOR)
+    factor_list.append(GF_INDUSTRY_MOMENTUM_CITIC_LEVEL_2_3_MONTH_FACTOR)
+    factor_list.append(GF_INDUSTRY_MOMENTUM_CITIC_LEVEL_2_6_MONTH_FACTOR)
+
     output_list = list()
 
     date_list = trade_day_list(start_date=begin_date, end_date=end_date)

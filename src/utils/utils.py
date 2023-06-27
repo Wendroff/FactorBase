@@ -5,6 +5,7 @@ import random
 import numpy as np
 from logging import getLogger
 
+import pandas as pd
 
 logger = getLogger()
 
@@ -154,6 +155,9 @@ def market_wind2ims(wind_code):
 
 
 def date_yyyymmdd(date=dt.date.today(), date_format='%Y%m%d'):
+    if isinstance(date, np.datetime64):
+        date = pd.to_datetime(date)
+
     if isinstance(date, dt.datetime) or isinstance(date, dt.date):
         return date.strftime(date_format)
     elif isinstance(date, int) or isinstance(date, float) or isinstance(date, np.integer):
